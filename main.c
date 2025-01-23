@@ -43,7 +43,7 @@ void sigint_handler(int sig) {
     }
     char msg[] = "Terminated by SIGINT\n";
     write(STDERR_FILENO, msg, sizeof(msg));
-    exit(1);
+    _exit(1);
 }
 
 int main(const int argc, char** argv) {
